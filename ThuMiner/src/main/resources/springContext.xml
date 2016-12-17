@@ -15,8 +15,20 @@
     <mvc:annotation-driven />
     <mvc:resources mapping="/resources/**" location="/resources/" />
     
-    <!-- 视图页面配置 -->
     
+    <!-- 处理器映射器HandlerMapping -->  
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>    
+    
+    <!-- 拦截器 -->  
+    <mvc:interceptors>  
+        <!-- 多个拦截器，顺序执行 -->  
+        <mvc:interceptor>  
+            <mvc:mapping path="/**"/>  
+            <bean class="com.ise.interceptor.LoginInterceptor"></bean>  
+        </mvc:interceptor>  
+    </mvc:interceptors> 
+    
+    <!-- 视图页面配置 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix">
             <value>/WEB-INF/views/</value>

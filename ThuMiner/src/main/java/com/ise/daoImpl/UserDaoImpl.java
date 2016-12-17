@@ -19,18 +19,18 @@ public class UserDaoImpl implements UserDao  {
 	
 	public void register(User user) {
 		// TODO Auto-generated method stub
-		String sqlStr = "create table if not exists testBTable (id int NOT NULL primary key auto_increment, username varchar(255), password varchar(255));";
+		String sqlStr = "create table if not exists userTable (id int NOT NULL primary key auto_increment, username varchar(255), password varchar(255));";
 		jdbcTemplate.execute(sqlStr);
 		
-		String sqlInsertStr = "insert into testBTable(username,password) values(?,?)";
+		String sqlInsertStr = "insert into userTable(username,password) values(?,?)";
 		Object[] params = new Object[]{user.getName(), user.getPassword()};
 		jdbcTemplate.update(sqlInsertStr, params);
 	}
 
 	public User findUserByUserName(String userName) {
 		// TODO Auto-generated method stub
-		String sqlStr = "create table if not exists testBTable (id int NOT NULL primary key auto_increment, username varchar(255), password varchar(255));";
-		String sqlQueryStr = "select * from testBTable where username=?";
+		String sqlStr = "create table if not exists userTable (id int NOT NULL primary key auto_increment, username varchar(255), password varchar(255));";
+		String sqlQueryStr = "select * from userTable where username=?";
 		final User user = new User();
 		jdbcTemplate.execute(sqlStr);
 		

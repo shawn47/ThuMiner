@@ -1,5 +1,7 @@
 package com.ise.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,17 +27,15 @@ public class UserController {
 	}
 	
 	@RequestMapping("/user/login")
-	public ModelAndView login(@RequestParam("username") String username, @RequestParam("password") String password){
-		ModelAndView mav = new ModelAndView();
+	public ModelAndView login(HttpSession session, @RequestParam("username") String username, @RequestParam("password") String password){
 		User user = new User(username, password);
 		User u = userService.loginCheck(user);
 		if(null == u){
-			mav.setViewName("main");
 //			mav.addObject("errorMsg","用户名或密码有误！");
-			return mav;
+			return new ModelAndView("redirect:/"); 
 		}
 		else{
-			mav.setViewName("main");
+			session.setAttribute("username", username);
 			return new ModelAndView("redirect:/main"); 
 		}
 	}
@@ -54,4 +54,12 @@ public class UserController {
 			return mav;
 		}
 	}
+	
+	@RequestMapping(value="/user/logout")  
+    public ModelAndView logout(HttpSession session) throws Exception{  
+        //清除Session  
+        session.invalidate();  
+          
+        return new ModelAndView("redirect:/");
+    }  
 }
