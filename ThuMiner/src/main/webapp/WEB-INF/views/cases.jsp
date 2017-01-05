@@ -37,8 +37,8 @@ pageEncoding="UTF-8"%>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li role="presentation" ><a href="index.html">Map</a></li>
-            <li role="presentation" ><a href="statistics.html">Statistics</a></li>
+            <li role="presentation" ><a href="main">Map</a></li>
+            <li role="presentation" ><a href="statistics">Statistics</a></li>
             <li role="presentation" class="active"><a href="#cases" role="tab" data-toggle="tab">Cases</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -252,7 +252,6 @@ pageEncoding="UTF-8"%>
     			console.log(result);
     		}
         });
-    	
     	<!-- end for getting data for table -->
     
     

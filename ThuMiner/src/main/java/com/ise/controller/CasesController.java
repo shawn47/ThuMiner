@@ -16,8 +16,7 @@ public class CasesController {
 	@RequestMapping("/cases")
 	public ModelAndView loginView(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("cases");
-		mav.addObject("name", "xxx");  
+		mav.setViewName("cases"); 
 		
 		return mav;
 	}

@@ -36,9 +36,9 @@ pageEncoding="UTF-8"%>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li role="presentation" ><a href="index.html">Map</a></li>
+            <li role="presentation" ><a href="main">Map</a></li>
             <li role="presentation" class="active"><a href="#Statistics" role="tab" data-toggle="tab">Statistics</a></li>
-            <li role="presentation" ><a href="cases.html">Cases</a></li>
+            <li role="presentation" ><a href="cases">Cases</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../navbar/">退出</a></li>
@@ -61,13 +61,13 @@ pageEncoding="UTF-8"%>
                 <div class="col-sm-2 col-md-2 col-sm-offset-1 col-md-offset-1 sidebar">
                   <ul class="nav nav-sidebar">
                     <li class="active"><a href="#eventsovertime">Events over time</a></li>
-                    <li><a href="active-cases.html">Active Cases</a></li>
-                    <li><a href="main2.html">Cases Variants</a></li>
-                    <li><a href="main3.html">Events Percase</a></li>
-                    <li><a href="case-duration.html">Case Duration</a></li>
-                    <li><a href="case-utilization.html">Case Utilization</a></li>
-                    <li><a href="meanactivityduration.html">Mean Activity Duration</a></li>
-                    <li><a href="meanwaitingtime.html">Mean Waiting Time</a></li>
+                    <li><a href="active-cases">Active Cases</a></li>
+                    <li><a href="main2">Cases Variants</a></li>
+                    <li><a href="main3">Events Percase</a></li>
+                    <li><a href="case-duration">Case Duration</a></li>
+                    <li><a href="case-utilization">Case Utilization</a></li>
+                    <li><a href="meanactivityduration">Mean Activity Duration</a></li>
+                    <li><a href="meanwaitingtime">Mean Waiting Time</a></li>
                   </ul>
                  </div>
                 </div>

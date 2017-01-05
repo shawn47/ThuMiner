@@ -38,8 +38,8 @@ pageEncoding="UTF-8"%>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
             <li role="presentation" class="active"><a href="#map" role="tab" data-toggle="tab">Map</a></li>
-            <li role="presentation" ><a href="statistics.html">Statistics</a></li>
-            <li role="presentation"><a href="cases.html">Cases</a></li>
+            <li role="presentation" ><a href="statistics">Statistics</a></li>
+            <li role="presentation"><a href="cases">Cases</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../navbar/">退出</a></li>
